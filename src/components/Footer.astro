@@ -1,0 +1,51 @@
+---
+import LogoFooter from '../assets/icons/logo.svg';
+import IconFacebook from '../assets/icons/facebook.svg';
+import IconInstagram from '../assets/icons/instagram.svg';
+import IconTwitter from '../assets/icons/twitter.svg';
+---
+
+<footer class="space-y-6 bg-gray-900 py-16 px-6 text-white lg:grid lg:grid-cols-4 lg:gap-8 lg:space-y-0">
+  <LogoFooter/>
+  <nav class="space-y-3 lg:col-start-2">
+    <h3 class="font-bold font-sans uppercase">Menu</h3>
+    <ul>
+      <li><a href="/">Mentions Légales</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="space-y-3 lg:col-start-3">
+    <h3 class="font-bold font-sans uppercase">Contact</h3>
+    <address>
+      6 Rue du Commandant Pierre Rossel<br />25200 Montbéliard<br />
+      <a href="tel:0612345678">06 12 34 56 78</a><br />
+      <a href="mailto:conservatoire@agglo-belfort.fr">contact@vissportfestival.com</a>
+    </address>
+  </div>
+
+  <div class="space-y-3 lg:col-start-4">
+    <h3 class="font-bold font-sans uppercase">Nous suivre</h3>
+    <ul class="flex gap-4">
+      <li>
+        <a href="https://facebook.com" aria-label="facebook">
+          <IconFacebook/>
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com" aria-label="instagram">
+          <IconInstagram/>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com" aria-label="twitter">
+          <IconTwitter/>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="text-slate-200 lg:col-span-2 items-center justify-center lg:col-start-2">
+    <p>©2025 Vis’Sport. Tous droits réservés</p>
+  </div>
+</footer>
