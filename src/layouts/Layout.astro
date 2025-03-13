@@ -2,22 +2,25 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import "../styles/global.css";
+const { title } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
-	</body>
+		<title>{title ? `${title} — Vis'Sport` : "Vis'Sport"}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <Header />
+      <slot/>
+      <Footer />
+    </main>
+  </body>
 </html>

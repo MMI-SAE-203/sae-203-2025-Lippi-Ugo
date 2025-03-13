@@ -1,0 +1,24 @@
+---
+import Layout from "./Layout.astro";
+import { Picture } from 'astro:assets';
+
+const { title, src, alt, duotoneClass } = Astro.props;
+---
+
+<Layout title={title}>
+  <div class="relative">
+    <Picture
+      pictureAttributes={{ class: `w-full h-auto object-cover ${duotoneClass}` }}
+      class="w-full"
+      formats={['avif', 'webp']}
+      widths={[540, 1024, src.width]}
+      sizes={`(max-width: 540px) 540px, (max-width: 1024px) 1024px, ${src.width}px`}
+      src={src}
+      alt={alt}
+    />
+    <h1 class="absolute bottom-16 lg:bottom-64 left-1/2 transform -translate-x-1/2 text-white text-6xl lg:text-8xl font-bold">{title}</h1>
+  </div>
+  <main>
+    <slot />
+  </main>
+</Layout>
