@@ -1,5 +1,5 @@
 import PocketBase from 'pocketbase' ;	
-const pb = new PocketBase(`http://127.0.0.1:8090`) ;
+export const pb = new PocketBase(`http://127.0.0.1:8090`) ;
 
 export async function allFilmsSorted() {
     const allFilmsSorted = await pb.collection('films').getFullList({ sort : 'date_projection', }) ;
@@ -17,17 +17,17 @@ export async function AllInvite() {
 }
 
 export async function oneID(id) {
-    const oneRecord = await pb.collection('films').getOne(id);
+    const oneRecord = await pb.collection('films').getOne(id, {expand: 'invite_film'});
     return oneRecord;
 }
 
 export async function oneIDActivite(id) {
-    const oneRecord = await pb.collection('activites').getOne(id);
+    const oneRecord = await pb.collection('activites').getOne(id , {expand: 'invite_activite'});
     return oneRecord;
 }
 
 export async function oneIDInvite(id) {
-    const oneRecord = await pb.collection('invites').getOne(id);
+    const oneRecord = await pb.collection('invites').getOne(id, {expand: 'film_associe'});
     return oneRecord;
 }
 

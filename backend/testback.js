@@ -81,8 +81,8 @@ import { allFilmsSorted, allActivitiesSorted, AllInvite, oneID, oneIDActivite, o
         
         /*try {
             const newInvite = {
-                "nom": "Lippi",
-                "prenom": "Ugo",
+                "nom": "Makhoul",
+                "prenom": "Abdallah",
                 "categorie": "Jurys",
                 "biographie": "test",
             };
@@ -128,8 +128,8 @@ import { allFilmsSorted, allActivitiesSorted, AllInvite, oneID, oneIDActivite, o
         
         /*try {
             const data = {
-                "nom": "Makhoul",
-                "prenom": "Abdallah",
+                "nom": "Lippi",
+                "prenom": "Ugo",
                 "categorie": "Jurys",
                 "biographie": "update",
                 
