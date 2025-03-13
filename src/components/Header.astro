@@ -1,6 +1,5 @@
 --- 
 import Logo from '../assets/icons/logo.svg';
-const currentPath = Astro.url.pathname;
 ---
 
 <header class="flex items-center bg-indigo-900 justify-between px-4 gap-8 border-b-2 border-b-indigo-900 h-20">
@@ -25,21 +24,16 @@ const currentPath = Astro.url.pathname;
     >
       <ul class="flex flex-col gap-4 lg:flex-row">
         <li>
-          <a class={`block p-4 rounded-lg text-white ${currentPath === '/properties' ? 'text-indigo-600 font-bold max-lg:bg-indigo-100 max-lg:rounded-lg' : ''}`} 
-          href="/properties">Rent</a>
-        </li>
-        <li>
           <a class="block p-4 rounded-lg text-white" href="/festival">Le Festival</a>
         </li>
         <li>
-          <a class={`block p-4 rounded-lg text-white ${currentPath === '/activite' ? 'text-indigo-600 font-bold max-lg:bg-indigo-100 max-lg:rounded-lg' : ''}`} 
-          href="/activite">Programme des activités</a>
+          <a class="block p-4 rounded-lg text-white" href="/activites">Programme des activités</a>
         </li>
         <li>
           <a class="block p-4 rounded-lg text-white" href="/films">Programme des films</a>
         </li>
         <li>
-          <a class="block p-4 rounded-lg text-white" href="/invites">Invités</a>
+          <a class="block p-4 rounded-lg text-white"href="/invites">Invités</a>
         </li>
         <li>
           <a class="block p-4 rounded-lg text-white" href="/infos">Infos Pratiques</a>
