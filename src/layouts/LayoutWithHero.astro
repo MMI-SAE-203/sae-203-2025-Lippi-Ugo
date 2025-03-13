@@ -15,6 +15,7 @@ const { title, src, alt, duotoneClass } = Astro.props;
       sizes={`(max-width: 540px) 540px, (max-width: 1024px) 1024px, ${src.width}px`}
       src={src}
       alt={alt}
+      loading="lazy"
     />
     <h1 class="absolute bottom-16 lg:bottom-64 left-1/2 transform -translate-x-1/2 text-white text-6xl lg:text-8xl font-bold">{title}</h1>
   </div>

@@ -2,6 +2,7 @@
 import LayoutWithHero from '../layouts/LayoutWithHero.astro';
 import Hero from '../assets/img/image.webp';
 import { Picture } from "astro:assets";
+import Card from '../components/Card.astro';
 import Programme from "../assets/img/programme.webp";
 import Invites from "../assets/img/invitespetite.webp";
 import Tarifs from "../assets/img/tarifs.webp";
@@ -14,31 +15,11 @@ import Axone from "../assets/icons/logo-axone-de-montbeliard-470x244 1.svg";
 		<p>Rejoignez-nous au festival Vis’Sport qui aura lieu du vendredi 19 septembre 2025 au dimanche 21 septembre 2025.</p>
 		<div>
 			<button class="inline-block mb-4 px-4 py-2 bg-indigo-800 text-white rounded hover:bg-indigo-900">Accéder à la boutique</button>
-			<br>
-			<article class="col-span-4 grid grid-cols-1 grid-rows-[auto_1fr] lg:grid-cols-[4fr_11fr] lg:grid-rows-1 mb-8">
-				<Picture pictureAttributes={{class:"duotone-vert w-full h-auto"}} src={Programme} alt="Programme" />
-				<div class="z-[2] col-span-1 col-start-1 lg:col-start-2 row-start-2 lg:row-start-1 space-y-4 bg-white p-6">
-					<h4 class="z-[1] col-start-1 row-start-1 my-6 mr-4 self-end font-mono text-3xl">Le Programme</h4>
-					<p>Découvrez une programmation exceptionnelle et profitez d'une ambiance unique.</p>
-					<a class="inline-block border-b-2 border-black uppercase" href="/films">Plus d'info</a>
-				</div>
-			</article>
-			<article class="col-span-4 grid grid-cols-1 grid-rows-[auto_1fr] lg:grid-cols-[4fr_11fr] lg:grid-rows-1 mb-8">
-				<Picture pictureAttributes={{class:"duotone-blanc w-full h-auto"}} src={Invites} alt="Tarifs" loading="lazy"/>
-				<div class="z-[2] col-span-1 col-start-1 lg:col-start-2 row-start-2 lg:row-start-1 space-y-4 bg-white p-6">
-					<h4 class="z-[1] col-start-1 row-start-1 my-6 mr-4 self-end font-mono text-3xl">Les invités</h4>
-					<p>Découvrez les invités du festival Vis’Sport</p>
-					<a class="inline-block border-b-2 border-black uppercase" href="/invites">Plus d'info</a>
-				</div>
-			</article>
-			<article class="col-span-4 grid grid-cols-1 grid-rows-[auto_1fr] lg:grid-cols-[4fr_11fr] lg:grid-rows-1 mb-8">
-				<Picture pictureAttributes={{class:"duotone-jaune w-full h-auto"}} src={Tarifs} alt="Tarifs" loading="lazy"/>
-				<div class="z-[2] col-span-1 col-start-1 lg:col-start-2 row-start-2 lg:row-start-1 space-y-4 bg-white p-6">
-					<h4 class="z-[1] col-start-1 row-start-1 my-6 mr-4 self-end font-mono text-3xl">Infos pratiques</h4>
-					<p>Retrouvez les tarifs, le lieu, l’hébergement et les transports proposé par le festival Vis’Sport.</p>
-					<a class="inline-block border-b-2 border-black uppercase" href="infos.astro">Plus d'info</a>
-				</div>
-			</article>
+			<div>
+				<Card title="Le Programme" description="Découvrez une programmation exceptionnelle et profitez d'une ambiance unique." image={Programme} alt="Image présentant le Programme" duotoneClass="duotone-vert" lien="/films"/>
+				<Card title="Les Invités" description="Découvrez les invités du festival Vis’Sport." image={Invites} alt="Image des invités" duotoneClass="duotone-blanc" lien="/invites"/>
+				<Card title="Infos pratiques" description="Retrouvez les tarifs, le lieu, l’hébergement et les transports proposé par le festival Vis’Sport." image={Invites} alt="Les Tarifs" duotoneClass="duotone-jaune" lien="/infos"/>
+			</div>
 			<article>
 				<hr>
 				<h2><strong>Nos Partenaires</strong></h2>
