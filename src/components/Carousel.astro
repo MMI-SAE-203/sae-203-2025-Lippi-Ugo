@@ -1,0 +1,17 @@
+---
+import { AllInvite } from '../../backend/backend.mjs';
+import CardInvite from './CardInvite.astro';
+const invites = await AllInvite();
+---
+
+<div class="carousel-container overflow-x-auto whitespace-nowrap space-x-4">
+  {invites.length > 0 ? (
+    invites.map((invite) => (
+      <div class="inline-block w-full h-auto lg:w-96 lg:h-96 flex-shrink-0">
+        <CardInvite {...invite} />
+      </div>
+    ))
+  ) : (
+    <p>Aucun invité prévu.</p>
+  )}
+</div>
