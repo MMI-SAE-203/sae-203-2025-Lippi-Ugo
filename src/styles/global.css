@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-base leading-normal;
+  }
+  h1 {
+    @apply leading-tight text-2xl lg:text-4xl;
+  }
+  h2 {
+    @apply text-xl leading-tight lg:text-2xl;
+  }
+  h3 {
+    @apply text-lg leading-tight;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+  main a {
+    @apply text-black;
+  }
+}
+
+@layer components {
+  .noscroll {
+    @apply overflow-hidden;
+  }
+  .container {
+    @apply max-w-screen-xl mx-auto px-6;
+  }
+  .duotone-bleu {
+    @apply relative flex overflow-hidden bg-blue-600 before:absolute before:inset-0 before:z-[1] before:bg-blue-950 before:mix-blend-lighten before:transition-all before:duration-300 before:ease-in-out;
+  }
+  .duotone-bleu img {
+    @apply flex-[1_0_100%] object-cover mix-blend-multiply grayscale transition-all duration-300 ease-in-out;
+  }
+  .duotone-jaune {
+    @apply relative flex overflow-hidden bg-yellow-500 before:absolute before:inset-0 before:z-[1] before:bg-blue-950 before:mix-blend-lighten before:transition-all before:duration-300 before:ease-in-out;
+  }
+  .duotone-jaune img {
+    @apply flex-[1_0_100%] object-cover mix-blend-multiply grayscale transition-all duration-300 ease-in-out;
+  }
+  .duotone-rouge {
+    @apply relative flex overflow-hidden bg-red-700 before:absolute before:inset-0 before:z-[1] before:bg-blue-950 before:mix-blend-lighten before:transition-all before:duration-300 before:ease-in-out;
+  }
+  .duotone-rouge img {
+    @apply flex-[1_0_100%] object-cover mix-blend-multiply grayscale transition-all duration-300 ease-in-out;
+  }
+  .duotone-blanc {
+    @apply relative flex overflow-hidden bg-white before:absolute before:inset-0 before:z-[1] before:bg-blue-950 before:mix-blend-lighten before:transition-all before:duration-300 before:ease-in-out;
+  }
+  .duotone-blanc img {
+    @apply flex-[1_0_100%] object-cover mix-blend-multiply grayscale transition-all duration-300 ease-in-out;
+  }
+  .duotone-vert {
+    @apply relative flex overflow-hidden bg-green-500 before:absolute before:inset-0 before:z-[1] before:bg-blue-950 before:mix-blend-lighten before:transition-all before:duration-300 before:ease-in-out;
+  }
+  .duotone-vert img {
+    @apply flex-[1_0_100%] object-cover mix-blend-multiply grayscale transition-all duration-300 ease-in-out;
+  }
+}
