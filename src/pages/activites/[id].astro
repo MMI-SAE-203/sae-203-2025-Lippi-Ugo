@@ -23,6 +23,10 @@ const event = await oneIDActivite(id);
       <h1 class="my-12">{event.titre}</h1>
       <ul class="divide-y *:grid *:grid-cols-4 *:items-center *:py-4 *:px-4">
         <li>
+          <span class="col-span-2 uppercase font-bold text-sm">Types</span>
+          <span class="col-span-2">{event.genre}</span>
+        </li>
+        <li>
           <span class="col-span-2 uppercase font-bold text-sm">Lieux</span>
           <span class="col-span-2">{event.lieux}</span>
         </li>

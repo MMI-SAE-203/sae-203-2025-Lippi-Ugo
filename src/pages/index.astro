@@ -14,7 +14,7 @@ import Axone from "../assets/icons/logo-axone-de-montbeliard-470x244 1.svg";
 	<section class="container py-20 space-y-8">
 		<p>Rejoignez-nous au festival Vis’Sport qui aura lieu du vendredi 19 septembre 2025 au dimanche 21 septembre 2025.</p>
 		<div>
-			<button class="inline-block mb-4 px-4 py-2 bg-indigo-800 text-white rounded hover:bg-indigo-900">Accéder à la boutique</button>
+			<button class="inline-block mb-10 mx-8 px-8 py-4 bg-blue-600 text-white text-base rounded-xl hover:bg-indigo-900">Accéder à la boutique</button>
 			<div>
 				<Card title="Le Programme" description="Découvrez une programmation exceptionnelle et profitez d'une ambiance unique." image={Programme} alt="Image présentant le Programme" duotoneClass="duotone-vert" lien="/films"/>
 				<Card title="Les Invités" description="Découvrez les invités du festival Vis’Sport." image={Invites} alt="Image des invités" duotoneClass="duotone-blanc" lien="/invites"/>
@@ -22,10 +22,10 @@ import Axone from "../assets/icons/logo-axone-de-montbeliard-470x244 1.svg";
 			</div>
 			<article>
 				<hr>
-				<h2><strong>Nos Partenaires</strong></h2>
+				<h2 class="mt-3 text-4xl"><strong>Nos Partenaires</strong></h2>
 				<div class="grid grid-cols-2 gap-4 items-center">
-					<img src={PMA.src} alt="Logo Pays Montbéliard Agglomération"/>
-					<img src={Axone.src} alt="Logo Axone Montbéliard"/>
+					<img src={PMA.src} alt="Logo Pays Montbéliard Agglomération" class="w-40 h-auto lg:w-60"/>
+					<img src={Axone.src} alt="Logo Axone Montbéliard" class="w-40 h-auto lg:w-60"/>
 				</div>
 			</article>
 		</div>
