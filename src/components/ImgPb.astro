@@ -1,5 +1,4 @@
 ---
-import { Picture } from 'astro:assets';
 import { pb } from '../../backend/backend.mjs';
 const { record, field = "imgUrl", alt, classPicture, classImg, thumb = "1024x1024" } = Astro.props;
 
@@ -8,7 +7,7 @@ const imageUrl = record?.[field] ? pb.files.getURL(record, record[field], { thum
 
 {imageUrl ? (
   <div class={classPicture}>
-    <img class={classImg}{classPicture} alt={alt || "Image"} src={imageUrl}/>
+    <img class={classImg} alt={alt || "Image"} src={imageUrl}/>
   </div>
 ) : (
   <div class={classPicture + " w-full h-60 lg:h-96 flex items-center justify-center bg-gray-200"}>
