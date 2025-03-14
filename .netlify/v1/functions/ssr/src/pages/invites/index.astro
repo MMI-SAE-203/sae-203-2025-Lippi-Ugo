@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Carousel from '../../components/Carousel.astro';
+import { AllInvite } from '../../../backend/backend.mjs';
+const invites = await AllInvite();
+---
+
+<Layout title="Invités">
+	<div>
+    <div class="container py-20 space-y-8">
+      <h1>Les Invités</h1>
+      <Carousel />
+    </div>
+  </div>
+</Layout>

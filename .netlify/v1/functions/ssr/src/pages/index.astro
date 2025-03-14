@@ -1,0 +1,33 @@
+---
+import LayoutWithHero from '../layouts/LayoutWithHero.astro';
+import Hero from '../assets/img/image.webp';
+import { Picture } from "astro:assets";
+import Card from '../components/Card.astro';
+import Programme from "../assets/img/programme.webp";
+import Invites from "../assets/img/invitespetite.webp";
+import Tarifs from "../assets/img/tarifs.webp";
+import PMA from "../assets/icons/PMA.svg";
+import Axone from "../assets/icons/logo-axone-de-montbeliard-470x244 1.svg";
+---
+
+<LayoutWithHero title="Vis'Sport" src={Hero} alt="Photo de la scène du festival Vis'Sport">
+	<section class="container py-20 space-y-8">
+		<p>Rejoignez-nous au festival Vis’Sport qui aura lieu du vendredi 19 septembre 2025 au dimanche 21 septembre 2025.</p>
+		<div>
+			<button class="inline-block mb-4 px-4 py-2 bg-indigo-800 text-white rounded hover:bg-indigo-900">Accéder à la boutique</button>
+			<div>
+				<Card title="Le Programme" description="Découvrez une programmation exceptionnelle et profitez d'une ambiance unique." image={Programme} alt="Image présentant le Programme" duotoneClass="duotone-vert" lien="/films"/>
+				<Card title="Les Invités" description="Découvrez les invités du festival Vis’Sport." image={Invites} alt="Image des invités" duotoneClass="duotone-blanc" lien="/invites"/>
+				<Card title="Infos pratiques" description="Retrouvez les tarifs, le lieu, l’hébergement et les transports proposé par le festival Vis’Sport." image={Invites} alt="Les Tarifs" duotoneClass="duotone-jaune" lien="/infos"/>
+			</div>
+			<article>
+				<hr>
+				<h2><strong>Nos Partenaires</strong></h2>
+				<div class="grid grid-cols-2 gap-4 items-center">
+					<Picture src={PMA} alt="Logo Pays Montbéliard Agglomération"/>
+					<Picture src={Axone} alt="Logo Axone Montbéliard"/>
+				</div>
+			</article>
+		</div>
+	</section>
+</LayoutWithHero>
