@@ -7,14 +7,9 @@ const imageUrl = record?.[field] ? pb.files.getURL(record, record[field], { thum
 ---
 
 {imageUrl ? (
-  <img 
-    pictureAttributes={{ class: classPicture }} 
-    class={classImg}
-    inferSize={true} 
-    formats={['avif', 'webp']} 
-    alt={alt || "Image"} 
-    src={imageUrl.src} 
-  />
+  <div class={classPicture}>
+    <img class={classImg}{classPicture} alt={alt || "Image"} src={imageUrl}/>
+  </div>
 ) : (
   <div class={classPicture + " w-full h-60 lg:h-96 flex items-center justify-center bg-gray-200"}>
     <span class="text-gray-500">Image non disponible</span>
