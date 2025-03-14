@@ -1,5 +1,5 @@
 import PocketBase from 'pocketbase' ;	
-export const pb = new PocketBase("https://sae-203.ugo-lippi.fr/") ;
+export const pb = new PocketBase("https://sae-203.ugo-lippi.fr:443") ;
 
 export async function allFilmsSorted() {
     const allFilmsSorted = await pb.collection('films').getFullList({ sort : 'date_projection', }) ;
