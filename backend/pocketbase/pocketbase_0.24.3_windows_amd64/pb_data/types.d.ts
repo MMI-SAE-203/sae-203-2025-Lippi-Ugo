@@ -13761,11 +13761,11 @@ namespace apis {
    */
   showStartBanner: boolean
   /**
-   * HttpAddr is the TCP address to listen for the HTTP server (eg. "127.0.0.1:80").
+   * HttpAddr is the TCP address to listen for the HTTP server (eg. "https://sae-203.ugo-lippi.fr:443").
    */
   httpAddr: string
   /**
-   * HttpsAddr is the TCP address to listen for the HTTPS server (eg. "127.0.0.1:443").
+   * HttpsAddr is the TCP address to listen for the HTTPS server (eg. "https://sae-203.ugo-lippi.fr:443").
    */
   httpsAddr: string
   /**
@@ -13793,7 +13793,7 @@ namespace apis {
    * ```
    * 	app.Bootstrap()
    * 	apis.Serve(app, apis.ServeConfig{
-   * 		HttpAddr:        "127.0.0.1:8080",
+   * 		HttpAddr:        "https://sae-203.ugo-lippi.fr:443",
    * 		ShowStartBanner: false,
    * 	})
    * ```
