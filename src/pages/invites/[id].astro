@@ -15,7 +15,7 @@ const invite = await oneIDInvite(Astro.params.id);
       field="image"
       alt={`${invite.prenom} ${invite.nom}`}
       classPicture="col-start-1 row-start-1 col-span-2 row-span-2 group-hover:before:bg-black"
-      classImg="object-cover w-full h-auto"
+      classImg="object-cover w-full h-full"
     />
     <header class="lg:col-start-7 lg:col-span-6">
       <h1 class="my-12">{invite.titre}</h1>
