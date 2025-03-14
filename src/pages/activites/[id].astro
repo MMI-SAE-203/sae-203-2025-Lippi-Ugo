@@ -36,7 +36,7 @@ const event = await oneIDActivite(id);
         </li>
         <li>
             <span class="col-span-2 uppercase font-bold text-sm">Invité à l'animation</span>
-            <a href={`/invites/${event.expand?.invite_activite.id}`}><span class="col-span-2">{event.expand?.invite_activite.prenom} {event.expand?.invite_activite.nom}</span></a>
+            <a class="underline" href={`/invites/${event.expand?.invite_activite.id}`}><span class="col-span-2">{event.expand?.invite_activite.prenom} {event.expand?.invite_activite.nom}</span></a>
         </li>
       </ul>
     </header>

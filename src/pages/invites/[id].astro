@@ -27,7 +27,7 @@ const invite = await oneIDInvite(Astro.params.id);
         </li>
         <li>
           <span class="col-span-2 uppercase font-bold text-sm">Film associé</span>
-          <a href={`/films/${invite.expand?.film_associe.id}`}><span class="col-span-2">{invite.expand?.film_associe.titre}</span></a>
+          <a class="underline" href={`/films/${invite.expand?.film_associe.id}`}><span class="col-span-2">{invite.expand?.film_associe.titre}</span></a>
         </li>
       </ul>
     </header>
