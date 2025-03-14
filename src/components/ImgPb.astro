@@ -7,13 +7,13 @@ const imageUrl = record?.[field] ? pb.files.getURL(record, record[field], { thum
 ---
 
 {imageUrl ? (
-  <Picture 
+  <img 
     pictureAttributes={{ class: classPicture }} 
     class={classImg}
     inferSize={true} 
     formats={['avif', 'webp']} 
     alt={alt || "Image"} 
-    src={imageUrl} 
+    src={imageUrl.src} 
   />
 ) : (
   <div class={classPicture + " w-full h-60 lg:h-96 flex items-center justify-center bg-gray-200"}>
