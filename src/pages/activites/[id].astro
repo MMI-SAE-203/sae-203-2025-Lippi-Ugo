@@ -34,13 +34,21 @@ const event = await oneIDActivite(id);
           <span class="col-span-2 uppercase font-bold text-sm">Date début</span>
           <span class="col-span-2">{ formatDate(event.date_debut_activite) }</span>
         </li>
-        <li>
+        {event.date_fin_activite && (
+          <li>
             <span class="col-span-2 uppercase font-bold text-sm">Date fin</span>
             <span class="col-span-2">{ formatDate(event.date_fin_activite) }</span>
-        </li>
+          </li>
+        )}
         <li>
             <span class="col-span-2 uppercase font-bold text-sm">Invité à l'animation</span>
-            <a class="underline" href={`/invites/${event.expand?.invite_activite.id}`}><span class="col-span-2">{event.expand?.invite_activite.prenom} {event.expand?.invite_activite.nom}</span></a>
+            {event.expand?.invite_activite ? (
+              <a class="underline" href={`/invites/${event.expand.invite_activite.id}`}>
+                <span class="col-span-2">{event.expand.invite_activite.prenom} {event.expand.invite_activite.nom}</span>
+              </a>
+            ) : (
+              <span class="col-span-2">Aucun invité attribué à cette activité</span>
+            )}
         </li>
       </ul>
     </header>
