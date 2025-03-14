@@ -7,7 +7,7 @@ const invites = await AllInvite();
 <div class="carousel-container overflow-x-auto whitespace-nowrap space-x-4">
   {invites.length > 0 ? (
     invites.map((invite) => (
-      <div class="inline-block w-full h-auto lg:w-96 lg:h-96 flex-shrink-0">
+      <div class="inline-block w-full h-auto flex-shrink-0">
         <CardInvite {...invite} />
       </div>
     ))
